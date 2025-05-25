@@ -1,0 +1,166 @@
+/* FindBike-webapp Custom Styles */
+
+/* Main theme colors */
+:root {
+	--primary-color: #1e88e5; /* Blue */
+	--secondary-color: #43a047; /* Green */
+	--accent-color: #ff9800; /* Orange */
+	--background-color: #f5f7fa; /* Light gray background */
+	--text-color: #333333; /* Dark gray text */
+	--light-text: #ffffff; /* White text */
+	--error-color: #e53935; /* Red */
+	--warning-color: #ffb300; /* Amber */
+	--success-color: #43a047; /* Green */
+	--border-radius: 8px; /* Rounded corners */
+	--box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Global styles */
+html,
+body,
+[data-testid="stAppViewContainer"] {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Header styling */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--primary-color);
+	font-weight: 600;
+}
+
+/* Main title styling */
+.main-title {
+	color: var(--primary-color);
+	font-size: 2.5rem;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 1rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid var(--primary-color);
+}
+
+/* Subtitle styling */
+.subtitle {
+	color: var(--text-color);
+	font-size: 1.2rem;
+	text-align: center;
+	margin-bottom: 2rem;
+	font-weight: 400;
+}
+
+/* Card styling for metrics */
+.metric-card {
+	background-color: white;
+	border-radius: var(--border-radius);
+	padding: 1.5rem;
+	box-shadow: var(--box-shadow);
+	transition: transform 0.3s ease;
+}
+
+.metric-card:hover {
+	transform: translateY(-5px);
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+	background-color: white;
+	border-right: 1px solid #e0e0e0;
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] h3 {
+	color: var(--primary-color);
+	font-weight: 600;
+	margin-top: 1.5rem;
+}
+
+/* Button styling */
+[data-testid="baseButton-secondary"] {
+	background-color: var(--primary-color) !important;
+	color: var(--light-text) !important;
+	border-radius: var(--border-radius) !important;
+	font-weight: 500 !important;
+	transition: all 0.3s ease !important;
+	border: none !important;
+	padding: 0.5rem 1.5rem !important;
+}
+
+[data-testid="baseButton-secondary"]:hover {
+	background-color: #1976d2 !important; /* Slightly darker blue */
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Input field styling */
+[data-testid="stTextInput"] > div > div > input {
+	border-radius: var(--border-radius);
+	border: 1px solid #e0e0e0;
+	padding: 0.5rem 1rem;
+	transition: all 0.3s ease;
+}
+
+[data-testid="stTextInput"] > div > div > input:focus {
+	border-color: var(--primary-color);
+	box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.2);
+}
+
+/* Select box styling */
+[data-testid="stSelectbox"] {
+	border-radius: var(--border-radius);
+}
+
+/* Checkbox styling */
+[data-testid="stCheckbox"] {
+	color: var(--primary-color);
+}
+
+/* Map container styling */
+.folium-map {
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+/* Status indicators */
+.status-available {
+	color: var(--success-color);
+	font-weight: 500;
+}
+
+.status-limited {
+	color: var(--warning-color);
+	font-weight: 500;
+}
+
+.status-unavailable {
+	color: var(--error-color);
+	font-weight: 500;
+}
+
+/* Footer styling */
+.footer {
+	text-align: center;
+	padding: 1.5rem 0;
+	margin-top: 2rem;
+	border-top: 1px solid #e0e0e0;
+	font-size: 0.9rem;
+	color: #757575;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.main-title {
+		font-size: 2rem;
+	}
+
+	.subtitle {
+		font-size: 1rem;
+	}
+}
